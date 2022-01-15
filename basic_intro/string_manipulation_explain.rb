@@ -66,3 +66,21 @@ story = "once upon a time in a land far, far away"
 p story[3]
 p story[-20]
 p story[3,12]
+
+#range method
+p story[21..33]
+p story[30..-3]
+
+#overwriting the character
+thing = "hakuna matata"
+p thing
+thing[2] = "o"
+p thing
+
+fact = "I love BlueBerry"
+p fact
+fact[7,4]="rasp"
+p fact
+
+#case methods
+puts "hello".capitalize
