@@ -58,3 +58,56 @@ nums.each_with_index do |num,index|
   sum += result
 end
 p sum
+
+
+#.map and .collect method. Both are identical. perform the same thing
+numbers = [1,2,3,4,5]
+squares = numbers.map { |number| number * number  }
+p squares
+
+fahr_temperature = [105,73,40,18,-2]
+cel_temperature = fahr_temperature.map do |temp_fh|
+  minus32 = temp_fh - 32
+  minus32*(5.0/9.0)
+end
+
+p cel_temperature
+
+# Iteration with the while and until method
+animals = ["lion","tiger","leopard","zebra"]
+
+i = 0
+while i < animals.length
+  puts animals[i]
+  i+=1
+end
+
+
+#break keyword
+color = ["red","white","orange","black","pink","blue"]
+i = 0
+while color.length
+  if color[i] == "black"
+    puts "Black Found"
+    break
+  else
+    puts "Not a Black.. its a #{color[i]}"
+  end
+  i += 1
+end
+
+
+#next keyword - its like continue
+numbers = [1,2,3,4,"Hello",5,6,nil,7,8]
+numbers.each do |num|
+  unless num.is_a?(Integer)
+    next
+  else
+    puts "The square of this NUMBER is #{num**2}"
+  end
+end
+
+
+#reverse method on array
+p "hello".reverse
+p [1,2,3].reverse
