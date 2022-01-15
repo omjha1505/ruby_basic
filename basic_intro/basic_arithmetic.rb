@@ -17,3 +17,4 @@ p 1.next() #() is redundant. with/without () is fine in ruby
 
 p !true
 p !1     #evaluate as false
+p !!1   #evaluate as true
