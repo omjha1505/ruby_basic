@@ -23,3 +23,10 @@ p number.to_f.class
 
 pi = 3.14
 p pi.to_i #It will just remove everything after . No ceiling and floor will happen
+
+
+#random number generator
+puts rand
+puts rand.round(2)*100.to_i
+puts rand(10000)
+puts rand(20..30)
