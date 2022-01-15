@@ -99,3 +99,66 @@ p arr.first
 p arr.last
 p arr.first(3) #first 3 elements
 p arr.last(3)  #last 3 elements
+
+# push,shovel and insert methods
+location = ["home","office","bar"]
+p location
+location.push("restaurant","saloon")
+p location
+location << "therater" << "gym" #shovel methods
+p location
+location.insert(1,"busstop","airport")
+p location
+
+#pop method
+location.pop
+p location
+location.pop(2) #will pop 2 item from last
+p location
+
+#shift and unshift methods
+arr = [1,2,3,4,5,6,7,8,9,10]
+p arr
+extract = arr.shift(3)
+p extract
+replace_elements = arr.unshift(11,12,13)
+p replace_elements
+
+
+# == and != operator on array
+a = [1,2,3]
+b = [1,2,3,4]
+c = [3,2,1]
+d = [1,2,3]
+
+p a == d
+p a != c
+p a != d
+
+#spaceship operator <=>
+p 5<=> 5  #0 if both side are equal
+p 5<=> 8
+p 5<=> 3
+p 5<=> "Hello" #nil if values are uncomparable
+
+p [3,4,5] <=> [3,4,5]
+p [3,4,5] <=> [nil,4,5]
+p [3,4,5] <=> [3,4,10]
+p [3,4,5] <=> [3,4,3]
+
+#convert Range object to Array object
+letter_range = "A".."K"
+p letter_range
+p letter_range.to_a
+
+# is_a? method
+puts 1.is_a?(Integer)
+puts 1.is_a?(String)
+puts 1.is_a?(Object)
+puts 1.is_a?(BasicObject)
+puts [1,2,3,"TEST"].is_a?(Array)
+
+arr = [1,2,3]
+if arr.is_a?(Array)
+  arr.each{ |chr| puts chr  }
+end
