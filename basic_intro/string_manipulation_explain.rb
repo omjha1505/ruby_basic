@@ -84,3 +84,31 @@ p fact
 
 #case methods
 puts "hello".capitalize
+puts "hello".upcase
+puts "OM JHA".downcase
+puts "OmpRaKashJha".swapcase
+
+#reversr methods
+puts "back to front".reverse
+
+#bang method
+word ="hello"
+p word.capitalize #This will just return the new object of string. word here is still the same i.e immutable
+p word
+p word.capitalize! # appending !(bang methods) means modifying the string
+p word
+
+s_word = "om prakash jha"
+p s_word
+p s_word.upcase
+p s_word
+p s_word.upcase!
+p s_word
+
+#include method
+name ="John Snow Om Jha"
+p name.include?("Om J")
+
+#empty? and nil? methods
+p "".empty?
+p "".nil?
