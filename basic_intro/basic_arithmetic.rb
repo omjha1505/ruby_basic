@@ -12,3 +12,8 @@ p 5 % 2
 p "school " + "bus"
 
 p 1.next() #() is redundant. with/without () is fine in ruby
+
+#negation
+
+p !true
+p !1     #evaluate as false

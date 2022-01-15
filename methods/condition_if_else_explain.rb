@@ -146,7 +146,7 @@ end
 
 def calculator(a,b,operation="add")
   if operation == "add"
-    add(a,b)
+    "The result of addition is #{add(a,b)}"
   elsif operation == "substract"
     substract(a,b)
 elsif operation == "multiply"
@@ -158,4 +158,5 @@ elsif operation == "divide"
   end
 end
 
-p calculator(10,11,"substract")
+p calculator(10,11)
+p calculator(10,11,"multiply")
