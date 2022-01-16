@@ -29,5 +29,15 @@ arr_two = arr_one.dup  #a way to create the copy object in different heap locati
 
 #splat arguments : used when exact no. of arguments is not know
 def sum(*numbers)
-
+ sum = 0
+ numbers.each{ |num| sum+=num }
+ sum
 end
+p sum(1,2,3,4,12)
+
+#any and all method
+p [1,2,3,45,7].any? do |number|     #any can be used o check if any circumstances is evaluating true
+  number.even?
+end
+
+p [2,3,4,6].all? {|n| n.odd?}    #all is complementary to any
