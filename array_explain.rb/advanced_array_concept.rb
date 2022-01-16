@@ -41,3 +41,59 @@ p [1,2,3,45,7].any? do |number|     #any can be used o check if any circumstance
 end
 
 p [2,3,4,6].all? {|n| n.odd?}    #all is complementary to any
+
+
+#find and detect method. both are identical . just a different name
+
+words = ["refrigerator" , "dictionary","microwave","playpus"]
+p words.select {|word| word.length > 8} #will return the array of objects which satisfy the block condition
+
+
+#uniq method : return array of objects after removing the identical arr_one
+
+p [2,4,2,1,34,1,5,1,7,8,8,9,9].uniq
+
+#compact method : remove all the nil objects
+p [1,2,3,nil,23,123,nil].compact
+
+#inject and reduce method. They are identical
+result = [10,20,30,40].reduce(0) do |pre,curr|
+  puts "Previous Value #{pre} and the current value #{curr}"  #This method keep track of the previous value
+  pre + curr
+end
+p result
+
+
+#flatten method . e.g :changes 2D/3D etc.. to 1D
+
+registrations = [
+  ["Bob","Dan","Jack"],
+  ["Om","Moo","foo"]
+]
+p registrations.flatten
+
+#zip method : combining the Array.
+names = ["boo","moo","jooo"]
+registration = [true,false,false]
+p names.zip(registration)
+p [1,2,3].zip([4,5,6],[true,false,true])
+
+#sample method : will return some random object from the Array
+number = [2,4,5,12,45,465,65,324]
+puts number.sample
+
+#multiplying array with *
+num = [1,4,23,12,232,1231]
+puts num*3
+str = ["om","foo"]
+puts str*2
+
+#union : combine arrays and remove duplicates
+p [1,2,3] | [3,2,4,56]
+
+#remove element from array that exists in other array
+p [1,2,3,4,5] - [1,5]
+
+
+#Array Intersection
+p [1,2,3,4,5,6] & [3,4,6]
