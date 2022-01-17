@@ -55,3 +55,29 @@ p menu
 p menu.length
 #.empty? method
 p menu.empty?
+
+#each and each_pair methods : both are identical
+capitals = {Jharkhand: "Ranchi",Bihar: "Patna",Tamilnadu: "Chennai" }
+
+capitals.each do |state,capital|
+  puts "#{state} capital is #{capital}"
+end
+
+capitals.each do |element|
+  puts "#{element}"
+end
+
+
+#each_key and each_value method
+capitals.each_key do |key|
+  p key
+end
+
+capitals.each_value do |key|
+  p key
+end
+
+#retriving like Array
+capitals = {Jharkhand: "Ranchi",Bihar: "Patna",Tamilnadu: "Chennai" ,Karnataka: "Bangalore"}
+p capitals.keys
+p capitals.values
