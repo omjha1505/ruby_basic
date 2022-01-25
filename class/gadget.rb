@@ -19,11 +19,28 @@ class Gadget
   end
 
   #getter methods
-  
+  def username
+    @username
+  end
+
+  def production_number
+    @production_number
+  end
+
+  #setter methods
+  def password=(password)
+    @password = password
+  end
+
+  def username=(user)
+    @username = user
+  end
 
 end
 
 phone = Gadget.new
+phone.password=("SECRET")
+phone.username=("OMJHA")
 laptop = Gadget.new
 #
 # puts phone.is_a?(Gadget)
@@ -38,3 +55,6 @@ laptop = Gadget.new
 puts phone.info
 puts phone.methods - Object.methods
 puts phone.to_s
+puts phone.username
+puts phone.production_number
+puts phone.username
