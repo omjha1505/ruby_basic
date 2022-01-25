@@ -50,3 +50,4 @@ p convert_to_rupee(1000)
 
 p convert(1000,to_euros)
 p convert(1000,to_rupees)
+p [100,200,300].map(&to_rupees)
