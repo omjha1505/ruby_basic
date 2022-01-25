@@ -105,3 +105,33 @@ phrase = Proc.new do
 end
 
 greeter(&phrase)
+
+
+hi = Proc.new{puts "Hi there"}
+5.times(&hi)
+hi.call
+
+
+#passing ruby method as Proc
+p ["1","2","3"].map { |number| number.to_i }
+p ["1","2","3"].map(&:to_i)
+p [1,2,3,4,5].select {|num| num.even?}
+p [1,2,3,4,5].select(&:even?)
+
+#methods wih Proc parameters
+
+def talk_about(name,&myprc)
+  puts "let me tell you about"
+  myprc.call(name)
+end
+
+good = Proc.new do |name|
+  puts "#{name} is brilliant!!!"
+end
+
+bad = Proc.new do |name|
+  puts "#{name} is very serious guy!!!!"
+end
+
+talk_about("OmJha",&good)
+talk_about("Prakash",&bad)
