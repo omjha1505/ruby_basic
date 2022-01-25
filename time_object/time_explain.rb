@@ -1,3 +1,5 @@
+require 'time'
+
 puts Time.new
 current_time = Time.new
 p current_time
@@ -53,3 +55,12 @@ p someday.class
 p someday.to_s.class
 p someday.ctime
 p someday.to_a
+
+#converting Time object to formatted String . look for strftime API
+some_random_day = Time.new(2022,05,12)
+p some_random_day.strftime("%B %d, %Y")
+
+
+# .parse and .strptime method
+puts Time.parse("2012-04-12")
+puts Time.strptime("03-04-2012","%m-%d-%Y")
