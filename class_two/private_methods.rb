@@ -16,11 +16,12 @@ def to_s
   the ID#{self.object_id}"
   end
 
+private
 def generate_production_number
   start_digit = rand(10000..99999)
   end_digit = rand(10000..99999)
   alphabet= ("A".."Z").to_a
-  middle_digits = "2007"
+  middle_digits = "2342"
   5.times{middle_digits << alphabet.sample}
   "#{start_digit}-#{middle_digits}-#{end_digit}"
 end
