@@ -1,3 +1,4 @@
 Helps :
 
 https://rubydoc.info/stdlib/
+https://rubular.com/  : for writing the regular expression
