@@ -2,3 +2,4 @@ Helps :
 
 https://rubydoc.info/stdlib/
 https://rubular.com/  : for writing the regular expression
+https://www.jetbrains.com/help/ruby/cucumber-support.html#cucumber_run_config
